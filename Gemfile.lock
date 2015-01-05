@@ -1,10 +1,16 @@
+PATH
+  remote: ../thomler
+  specs:
+    thomler (0.1.9)
+      rack
+
 GEM
   remote: https://rubygems.org/
   specs:
-    thomler (0.0.5)
+    rack (1.6.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  thomler
+  thomler!
