@@ -1,7 +1,13 @@
-class QuotesController < Thomler::Controller
+class QuotesController < ::Thomler::Controller
   def index
     quotes = FileModel.all
     render :index, :quotes => quotes
+  end
+
+  def show
+    quote = FileModel.find(params["id"])
+    ua = request.user_agent
+    render_response :quote, :obj => quote, :ua => ua
   end
 
   def new_quote
